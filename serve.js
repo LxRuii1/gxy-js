@@ -10,8 +10,8 @@ setTimeout(() => {
 
 // 输入账号密码
 module.exports.obj = {
-  phone: os.environ["PHONE"],
-  password: os.environ["PASSWORD"],
+  phone: process.env.PHONE,
+  password: process.env.PASSWORD,
   title: text.dayTitle[numX],
   content: text.dayContent[numX],
 }
