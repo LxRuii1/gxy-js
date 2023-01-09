@@ -8,7 +8,8 @@ var userId
 var token
 var userId
 var sign
-var Jrtime
+var jrtime
+var key = 'SCT183817TaSyXAD2OvKBLp1W4YIS3rcFn'
 
 
 // 网络请求
@@ -45,7 +46,7 @@ function getdata() {
   d <= 9 ? d = '0' + d : d = d + 0;
   var m = date.getMonth() + 1;
   m <= 9 ? m = '0' + m : m = m + 0;
-  Jrtime = `${y}-${m}-${d} 00:00:00 00:00:00` // 系统返回当前时间
+  jrtime = `${y}-${m}-${d} 00:00:00 00:00:00` // 系统返回当前时间
 }
 getdata()
 
@@ -117,8 +118,18 @@ function getRb() {
   }).then((res) => {
     if (res.code == 200) {
       console.log('日报填写成功');
+      getServers();
     }
   });
+}
+
+function getServers() {
+  ajax.ajax({
+    method: 'get',
+    url: "https://sctapi.ftqq.com/" + key + ".send?title=" + user.obj.title + "&desp=" + user.obj.content
+  }).then((res) => {
+    console.log(res);
+  })
 }
 
 var app = {
