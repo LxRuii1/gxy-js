@@ -127,8 +127,6 @@ function getServers() {
   ajax.ajax({
     method: 'get',
     url: "https://sctapi.ftqq.com/" + key + ".send?title=" + user.obj.title + "&desp=" + user.obj.content
-  }).then((res) => {
-    console.log(res);
   })
 }
 
