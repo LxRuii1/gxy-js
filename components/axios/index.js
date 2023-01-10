@@ -28,7 +28,7 @@ let API_BASE_PATH = ''
 // 设置统一的请求url
 axios.defaults.baseURL = API_BASE_PATH;
 // 设置axios超时时长
-axios.defaults.timeout = '10000';
+axios.defaults.timeout = '30000';
 
 
 // axios 默认配置
