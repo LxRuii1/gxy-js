@@ -106,7 +106,7 @@ function getRb() {
       "content": user.obj.content,
       "imageList": [],
       "planId": "f554902da5fb17f296d5f8fb3f8bc008",
-      "reportTime": '2023-01-08 00:00:00',
+      "reportTime": jrtime,
       "reportType": "day",
       "t": t,
       "title": user.obj.title,
