@@ -103,13 +103,13 @@ function getRb() {
     url: "https://api.moguding.net:9000/practice/paper/v4/save",
     methods: "POST",
     data: {
-      "content": user.obj.content,
+      "content": user.obj.content || 'ABCDEFJHIJKLMNOPQ',
       "imageList": [],
       "planId": "f554902da5fb17f296d5f8fb3f8bc008",
       "reportTime": jrtime,
       "reportType": "day",
       "t": t,
-      "title": user.obj.title,
+      "title": user.obj.title || '日报',
     },
     headers: {
       "sign": sign,
@@ -126,7 +126,7 @@ function getRb() {
 function getServers() {
   ajax.ajax({
     method: 'get',
-    url: "https://sctapi.ftqq.com/" + key + ".send?title=" + user.obj.title + "&desp=" + user.obj.content
+    url: "https://sctapi.ftqq.com/" + key + ".send?title=" + '日报填写成功:' + user.obj.title + "&desp=" + user.obj.content
   })
 }
 
