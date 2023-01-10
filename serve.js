@@ -6,7 +6,7 @@ var numX = Math.ceil(Math.random() * 18);
 
 setTimeout(() => {
   require('./src/get')
-}, 1000);
+}, 3000);
 
 // 输入账号密码
 module.exports.obj = {
