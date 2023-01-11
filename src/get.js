@@ -48,7 +48,6 @@ function getdata() {
   m <= 9 ? m = '0' + m : m = m + 0;
   jrtime = `${y}-${m}-${d} 00:00:00 00:00:00` // 系统返回当前时间
 }
-getdata()
 
 // 登录
 function getSign() {
@@ -76,6 +75,7 @@ function getSign() {
       console.log('登录成功');
       token = res.data.token
       userId = res.data.userId
+      getdata()
       getMd5()
       getRb()
 
@@ -126,7 +126,7 @@ function getRb() {
 function getServers() {
   ajax.ajax({
     method: 'get',
-    url: "https://sctapi.ftqq.com/" + key + ".send?title=" + '日报填写成功:' + user.obj.title + "&desp=" + user.obj.content
+    url: "https://sctapi.ftqq.com/" + key + ".send?title=" + '日报填写成！！每日一诗：' + user.obj.title + "&desp=" + user.obj.content
   })
 }
 
