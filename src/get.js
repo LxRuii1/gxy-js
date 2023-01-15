@@ -106,7 +106,7 @@ function getSign() {
         getRb()
       }
     })
-    console.log(err);
+    console.log(err + '----------');
   })
 }
 // getSign()
