@@ -14,4 +14,5 @@ module.exports.obj = {
   password: 'Hf123456',
   title: text.dayTitle[numX],
   content: text.dayContent[numX],
+  serverJ: 'SCT188799TFS503btjvBfo7C69Ps18T4At'
 }
