@@ -81,7 +81,6 @@ function getSign() {
       getRb()
     }
   }).catch((err) => {
-    getSign();
     console.log('超时了');
   })
 }
@@ -126,7 +125,6 @@ function getRb() {
       getServers()
     }
   }).catch((err) => {
-    getRb()
   });
 }
 
@@ -136,7 +134,6 @@ function getServers() {
     url: "https://sctapi.ftqq.com/" + key + ".send?title=" + '日报填写成功！！内容：' + user.obj.title + "&desp=" + user.obj.content,
     method: 'GET'
   }).catch((err) => {
-    getServers()
   })
 }
 
